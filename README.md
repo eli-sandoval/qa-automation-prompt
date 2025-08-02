@@ -16,7 +16,7 @@ In this script, you must log each request into the SQlite database in this proje
 
 Second, you are expected to write a second script that reads from this database, calculates the service uptime, and outputs it to the console.
 
-Tip: You can accurately detect uptime by monitoring for 10 minutes with >1 req/s.
+Tip: Monitoring <10 minutes should be plenty to detect uptime accudately
 
 ### The Bug
 
