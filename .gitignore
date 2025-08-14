@@ -1,0 +1,7 @@
+/.idea/
+/build/
+/project/build
+/project/.gradle
+/out/
+/gradle/build/
+/.gradle
