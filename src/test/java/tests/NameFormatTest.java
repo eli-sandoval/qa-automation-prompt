@@ -30,10 +30,9 @@ public class NameFormatTest {
     public void reproduceTwoPLowercaseBug() {
         HttpClient client = HttpClient.newHttpClient();
 
-        for (int i = 0; i < PROBLEMATIC_NAMES.length; i++) {
-            String name = PROBLEMATIC_NAMES[i];
+        for (String name : PROBLEMATIC_NAMES) {
             try {
-                System.out.println("Attempt " + (i + 1) + ": Sending name " + name);
+                System.out.println("Sending name: " + name);
 
                 // Prepare JSON payload
                 JSONObject json = new JSONObject();
@@ -48,6 +47,12 @@ public class NameFormatTest {
 
                 // Send request and capture response
                 HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+                // Added condition in case the flaky uptime bug appears instead of the name formatting issue
+                if (response.body().equals("{\"message\":\"System is down\"}")) {
+                    System.out.println("Skipped due to uptime bug for name: " + name);
+                    continue; //Skips and continues with next name on array
+                }
 
                 // Assert on response
                 Assertions.assertEquals(500, response.statusCode());

@@ -39,10 +39,18 @@ The project uses **Gradle Wrapper**, so you don’t need to install Gradle manua
 ```bash
 ./gradlew build
 ```
+or the following command to skip the tests for now
+```bash
+./gradlew build -x test
+```
 
 ### Windows (PowerShell or Command Prompt)
 ```powershell
 gradlew.bat build
+```
+or the following command to skip the tests for now
+```powershell
+gradlew.bat build -x test
 ```
 
 This will compile the source code and download all required dependencies.
