@@ -1,5 +1,9 @@
 # QA Automation Challenge
 
+## Instructions
+
+For detailed steps on how to run the project on macOS and Windows, please see [INSTRUCTIONS.md](INSTRUCTIONS.md).
+
 ## Introduction
 
 This challenge is designed to evaluate candidate’s practical understanding of scripting, databases, and monitoring.
