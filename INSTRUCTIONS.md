@@ -52,11 +52,11 @@ or the following command to skip the tests for now
 
 ### Windows (PowerShell or Command Prompt)
 ```powershell
-gradlew.bat build
+.\gradlew.bat build
 ```
 or the following command to skip the tests for now
 ```powershell
-gradlew.bat build -x test
+.\gradlew.bat build -x test
 ```
 
 This will compile the source code and download all required dependencies.
@@ -74,7 +74,7 @@ The **monitoring** script sends names to the API at a fixed interval (set in app
 
 ### Windows
 ```powershell
-gradlew.bat runMonitor
+.\gradlew.bat runMonitor
 ```
 
 > The script runs for the configured duration (`monitor.duration.sec` in `application.properties`).  
@@ -93,7 +93,7 @@ This script calculates the percentage of successful API responses from the exist
 
 ### Windows
 ```powershell
-gradlew.bat runUptime
+.\gradlew.bat runUptime
 ```
 
 ---
@@ -143,7 +143,7 @@ A JUnit test is included to reproduce the bug when the API receives names contai
 
 ### Windows
 ```powershell
-gradlew.bat test
+.\gradlew.bat test
 ```
 
 Test results will be displayed in the console and stored under `build/reports/tests/test/index.html`.
