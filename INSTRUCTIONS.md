@@ -5,6 +5,12 @@ The reviewer will be able to run the monitoring script and calculate service upt
 
 ---
 
+## Prerequisites
+
+Java 17+ installed
+
+Gradle installed (or use the included gradlew script)
+
 ## 1. Clone the Repository
 
 You can use either **HTTPS** or **SSH** to clone the repository.
